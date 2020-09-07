@@ -17,15 +17,19 @@
 #include <SwitecX25.h>
 
 // standard X25.168 range 315 degrees at 1/3 degree steps
-#define STEPS_H (315*3) //Range for rpm and speed gauges
-#define STEPS_L (315*3) //Range for water temp. and fuel gauges
-#define STEPS (315*3)
+#define STEPS (315*3) //Range of motors
 
 // Four motors with corresponging pins
-SwitecX25 rpm(STEPS,5, 4, 3, 2);//5 4 3 2 
-SwitecX25 speedo(STEPS,9,8,7,6); // 9 8 7 6
+SwitecX25 rpm(STEPS,5,4,3,2); 
+SwitecX25 speedo(STEPS,9,8,7,6);
 SwitecX25 temp(STEPS,A0,A1,A2,A3); //Using analog pins as digital
 SwitecX25 fuel(STEPS,11,12,10,13); 
+
+//Multpiers for gauges
+const float rpmMultiplier = 0.135;
+const float speedoMultiplier = 2.8125;
+const float fuelMultiplier = 2.7;
+const float tempMultiplier = 2.25;
 
 void setup(void)
 {
@@ -40,9 +44,7 @@ void setup(void)
   fuel.setPosition(0);
   
   Serial.begin(9600);
-  Serial.print("Enter a step position from 0 through ");
-  Serial.print(STEPS-1);
-  Serial.println(".");
+  Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100)");
 }
 
 void loop(void)
@@ -62,16 +64,16 @@ void loop(void)
     if (c==59) {
       switch (counter){
         case 0:
-          rpm.setPosition(nextPos);
+          rpm.setPosition(nextPos * rpmMultiplier);
           break;
         case 1:
-          speedo.setPosition(nextPos);
+          speedo.setPosition(nextPos * speedoMultiplier);
           break;
         case 2:
-          temp.setPosition(nextPos);
+          temp.setPosition(nextPos * tempMultiplier);
           break;
         case 3:
-          fuel.setPosition(nextPos);
+          fuel.setPosition(nextPos * fuelMultiplier);
           break;
       }
       nextPos = 0;
