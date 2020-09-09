@@ -40,11 +40,6 @@ void setup(void)
   speedo.zero();
   temp.zero();
   fuel.zero();
-
-  rpm.setPosition(STEPS-1);
-  speedo.setPosition(STEPS-1);
-  temp.setPosition(STEPS-1);
-  fuel.setPosition(STEPS-1);
   
   Serial.begin(9600);
   Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100)");
@@ -92,25 +87,4 @@ void loop(void)
       nextPos = 0;
     }
   }
-}
-
-void sweep(){
-  rpm.setPosition(STEPS-1);
-  speedo.setPosition(STEPS-1);
-  temp.setPosition(STEPS-1);
-  fuel.setPosition(STEPS-1);
-  rpm.update();
-  speedo.update();
-  temp.update();
-  fuel.update();
-  delay(2000);
-  rpm.setPosition(0);
-  speedo.setPosition(0);
-  temp.setPosition(0);
-  fuel.setPosition(0);
-  rpm.update();
-  speedo.update();
-  temp.update();
-  fuel.update();
-
 }
