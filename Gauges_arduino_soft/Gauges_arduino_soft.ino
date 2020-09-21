@@ -18,8 +18,6 @@
 
 // standard X25.168 range 315 degrees at 1/3 degree steps
 #define STEPS (315*3) //Range of motors
-#define SMALL_GAUGES_USABLE_STEPS 270
-#define LARGE_GAUGES_USABLE_STEPS 675
 
 // Four motors with corresponging pins
 SwitecX25 rpm(STEPS,5,4,3,2); 
@@ -40,9 +38,6 @@ void setup(void)
   speedo.zero();
   temp.zero();
   fuel.zero();
-
-  rpm.sweep();
-  speedo.sweep();
   
   Serial.begin(9600);
   Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100)");
@@ -60,8 +55,8 @@ void loop(void)
   
   if (Serial.available()) {
     char c = Serial.read();
-    Serial.print((byte)c);
-    Serial.print(';');
+    //Serial.print((byte)c);
+    //Serial.print(';');
     if (c==59) {
       switch (counter){
         case 0:
@@ -82,7 +77,7 @@ void loop(void)
         counter++;
       else
         counter = 0;
-      Serial.println();
+      //Serial.println();
     } else if (c>='0' && c<='9') {
       nextPos = 10*nextPos + (c-'0');
     } else if (c == 10 || c==13){
