@@ -22,6 +22,7 @@ In process of making
 Have you become the owner of the inctrument cluster of the car you don't own, don't have diagrams or don't know the CAN-BUS headers?
 This solution plugs directly into stepper motors on the pcb, and allows you to take controll of the needles, skiping CAN-BUS and rest of the pcb electronics.
 It requires no additional motor controllers, just Arduino.
+![Board Gif](/pics/sweep.gif)
 
 ## What do I need?
  * Arduino nano (soldered)
@@ -51,9 +52,10 @@ Remember, change the pins to suit your needs ( ͡~ ͜ʖ ͡°)
 
 [Ardonaut's ariticle](https://arduining.com/2012/04/22/arduino-driving-a-micro-stepper-motor/), about controlling stepper motors using arduino.
 
-[The pcb](https://www.tindie.com/products/TheRengineer/analog-gauge-stepper-breakout-board/) I was basing on, [source files].(https://github.com/TheRengineer/GaugeStepperBreakout)
+[The pcb](https://www.tindie.com/products/TheRengineer/analog-gauge-stepper-breakout-board/) I was basing on, [source files](https://github.com/TheRengineer/GaugeStepperBreakout)
 
 ## Licence
+
 MIT License
 
 Copyright (c) 2020 Mateusz Kusiak (Timax)
