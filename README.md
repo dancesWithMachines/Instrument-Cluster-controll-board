@@ -4,6 +4,8 @@ Controll your instrument cluster with single arduino! No can-bus module needed!
 The instrument cluster controll board allows to take controll of 4 gauges and should work with instrument clusters using X25 stepper motors or similar.
 In my case I used instrument cluster from Jaguar X-type 2.0d.
 
+![Insides](/pics/insides.jpg)
+
 ## Table of Contents
 * [YouTube video](#Video)
 * [Why do I need this?](#Why-do-I-need-this?)
