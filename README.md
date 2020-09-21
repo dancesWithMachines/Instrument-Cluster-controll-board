@@ -22,6 +22,7 @@ In process of making
 Have you become the owner of the inctrument cluster of the car you don't own, don't have diagrams or don't know the CAN-BUS headers?
 This solution plugs directly into stepper motors on the pcb, and allows you to take controll of the needles, skiping CAN-BUS and rest of the pcb electronics.
 It requires no additional motor controllers, just Arduino.
+
 ![Board Gif](/pics/sweep.gif)
 
 ## What do I need?
