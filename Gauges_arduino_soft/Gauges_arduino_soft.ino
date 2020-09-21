@@ -40,6 +40,9 @@ void setup(void)
   speedo.zero();
   temp.zero();
   fuel.zero();
+
+  rpm.sweep();
+  speedo.sweep();
   
   Serial.begin(9600);
   Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100)");
