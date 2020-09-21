@@ -40,7 +40,7 @@ void setup(void)
   fuel.zero();
   
   Serial.begin(9600);
-  Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100)");
+  Serial.println("Data feed pattern: rmp;speed(km/h);temp(*C 120 max); fuel (max 100);");
 }
 
 void loop(void)
