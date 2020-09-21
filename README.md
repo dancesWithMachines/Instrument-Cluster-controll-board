@@ -51,7 +51,7 @@ Remember, change the pins to suit your needs ( ͡~ ͜ʖ ͡°)
 
 [Ardonaut's ariticle](https://arduining.com/2012/04/22/arduino-driving-a-micro-stepper-motor/), about controlling stepper motors using arduino.
 
-[The pcb](https://www.tindie.com/products/TheRengineer/analog-gauge-stepper-breakout-board/) I was basing on, [Source files](https://github.com/TheRengineer/GaugeStepperBreakout)
+[The pcb](https://www.tindie.com/products/TheRengineer/analog-gauge-stepper-breakout-board/) I was basing on, [source files].(https://github.com/TheRengineer/GaugeStepperBreakout)
 
 ## Licence
 ![Board JPG](/pics/board.jpg)
