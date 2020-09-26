@@ -12,7 +12,8 @@ In my case I used instrument cluster from Jaguar X-type 2.0d.
 * [What do I need?](#What-do-I-need?)
 * [Making it](#Making-it)
 * [Coding](#Coding)
-* [Souces / Additional information](#Sources)
+* [Souces](#Sources)
+* [Problems](#Common-problems)
 * [Licence](#Licence)
 
 ## Video
@@ -54,6 +55,12 @@ Remember, change the pins to suit your needs ( ͡~ ͜ʖ ͡°)
 [Ardonaut's ariticle](https://arduining.com/2012/04/22/arduino-driving-a-micro-stepper-motor/), about controlling stepper motors using arduino.
 
 [The pcb](https://www.tindie.com/products/TheRengineer/analog-gauge-stepper-breakout-board/) I was basing on, [source files](https://github.com/TheRengineer/GaugeStepperBreakout)
+
+## Common problems
+
+Two issues I found working with Switec X25 library were related to delay speeds declared in the library code (File: SwitecX25.cpp).
+* If the ,,zero" function only buzzes your motors, but does not rewind them to 0 position, you must increase ,,RESET_STEP_MICROSEC" definition (2000 works for me)
+* If the motors are working, but stop in the middle and disrupt the gauge, you must edit the "defaultAccelTable", and increase delay times from the bottom (my lowest is 1500)
 
 ## Licence
 
