@@ -17,7 +17,7 @@ In my case I used instrument cluster from Jaguar X-type 2.0d.
 * [Licence](#Licence)
 
 ## Video
-In process of making
+![https://youtu.be/XNLJWUMKByM](/pics/ytVid.png)
 
 ## Why do I need this?
 Have you become the owner of the inctrument cluster of the car you don't own, don't have diagrams or don't know the CAN-BUS headers?
