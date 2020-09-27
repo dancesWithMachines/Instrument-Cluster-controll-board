@@ -27,7 +27,7 @@ SwitecX25 fuel(STEPS,11,12,10,13);
 
 //Multpiers for gauges
 const float rpmMultiplier = 0.135;
-const float speedoMultiplier = 2.8125;
+const float speedoMultiplier = 2.813;
 const float fuelMultiplier = 2.7;
 const float tempMultiplier = 2.25;
 
