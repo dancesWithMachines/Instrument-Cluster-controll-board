@@ -1,7 +1,7 @@
-# Instrument-Cluster-controll-board
-Controll your instrument cluster with single arduino! No can-bus module needed!
+# Instrument-Cluster-control-board
+Control your instrument cluster with single arduino! No can-bus module needed!
 
-The instrument cluster controll board allows to take controll of 4 gauges and should work with instrument clusters using X25 stepper motors or similar.
+The instrument cluster control board allows to take control of 4 gauges and should work with instrument clusters using X25 stepper motors or similar.
 In my case I used instrument cluster from Jaguar X-type 2.0d.
 
 ![Insides](/pics/insides.jpg)
@@ -26,8 +26,8 @@ In my case I used instrument cluster from Jaguar X-type 2.0d.
 
 ## Why do I need this?
 Have you become the owner of the inctrument cluster of the car you don't own, don't have diagrams or don't know the CAN-BUS headers?
-This solution plugs directly into stepper motors on the pcb, and allows you to take controll of the needles, skiping CAN-BUS and rest of the pcb electronics.
-It requires no additional motor controllers, just Arduino.
+This solution plugs directly into stepper motors on the pcb, and allows you to take control of the needles, skiping CAN-BUS and rest of the pcb electronics.
+It requires no additional motor controlers, just Arduino.
 
 ![Board Gif](/pics/sweep.gif)
 
@@ -48,7 +48,7 @@ It requires no additional motor controllers, just Arduino.
 ## Coding
  
 You'll need Switec X25 library, which you can find [here](https://github.com/clearwater/SwitecX25).
-I modified example sketch to accept data in suitable units and to controll all 4 motors.
+I modified example sketch to accept data in suitable units and to control all 4 motors.
 Data feed pattern: "rmp;speed(km/h);temp(*C 120 max); fuel (max 100);"
 ![Instances](/pics/instances.png) </br>
 Remember, change the pins to suit your needs ( ͡~ ͜ʖ ͡°)
